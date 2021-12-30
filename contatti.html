@@ -1,6 +1,72 @@
 <html>
-	<head>Contatti</head>
-	<body>
-		<p>chi legge è scemo!!!</p>
-	</body>
+    <head>
+        <title>Contatti</title>
+        <style>
+            .error-label {
+                color: white;
+                background-color: red;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Contatti</h1>
+        <!-- <p>chi legge è scemo!!!</p> -->
+
+        <form>
+            <label>email</label>
+            <input
+                type="text"
+                id="email"
+                name="email"
+                maxlength="4"
+                placeholder="exampl@asd.ir"
+            />
+            <p id="email-p" class="error-label">errore mail</p>
+
+            <br />
+
+            <label>password</label>
+            <input type="password" id="password" name="password" />
+            <p id="password-p" class="error-label">errore password</p>
+            <!-- <input type="text"> -->
+
+            <button type="button" onclick="login()">login</button>
+        </form>
+    </body>
 </html>
+
+<script>
+    var email = document.getElementById("email");
+
+    email.onblur = function () {
+		console.log("asd")
+        if (this.value.length < 3) {
+            // alert("error email")
+            document.getElementById("email-p").style["display"] = "block";
+        } else {
+            document.getElementById("email-p").style["display"] = "none";
+        }
+    };
+
+    function login() {
+        var email = document.getElementById("email").value
+        var password = document.getElementById("password").value
+        if (email.length < 3 ) {
+        	// alert("error email")
+        	document.getElementById("email-p").style["display"] = "block"
+        }
+        else {
+        	document.getElementById("email-p").style["display"] = "none"
+        }
+        
+		//
+        if (password.length < 3 ) {
+        	document.getElementById("password-p").style["display"] = "block"
+        }
+        else {
+        	document.getElementById("password-p").style["display"] = "none"
+        }
+        // TODO: fai login
+    }
+</script>
