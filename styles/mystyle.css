@@ -1,0 +1,34 @@
+/* tag */
+body {
+	background-color: #CCC;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* id */
+#lista1 {
+	color: blue;
+}
+
+/* classi */
+.contenitori-test {
+	padding: 50px;
+	background-color: chartreuse;
+}
+
+
+span {
+	background-color: coral;
+}
+
+#container span {
+	color: bisque;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#container span .gianni {
+	color: cyan;
+}
